@@ -1,0 +1,14 @@
+fastapi==0.115.0
+mangum==0.17.0
+uvicorn==0.30.6
+python-dotenv==1.0.1
+SQLAlchemy==2.0.35
+sqlalchemy-aurora-data-api==0.5.0
+alembic==1.13.2
+pyjwt==2.9.0
+passlib==1.7.4
+psycopg2-binary==2.9.9
+bcrypt==4.2.0
+python-multipart==0.0.20
+email-validator>=2.0.0
+jinja2==3.1.5

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            width: 600px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .email-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .email-header h2 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .section-header {
+            background-color: #e7f5e7;
+            padding: 10px;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+        .section-content {
+            padding: 15px;
+            font-size: 16px;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #333;
+        }
+        .email-footer {
+            margin-top: 30px;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #888888;
+            border-top: 1px solid #e0e0e0;
+        }
+        .email-footer p {
+            margin: 5px 0;
+        }
+        .product-info p, .address-info p, .other-info p {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h2>Product Information</h2>
+        </div>
+
+        <!-- Product Information Section -->
+        <div class="section-header">
+            Product Info
+        </div>
+        <div class="section-content product-info">
+            <p><span class="highlight">Brand:</span> {{ brand }}</p>
+            <p><span class="highlight">Type:</span> {{ type }}</p>
+            <p><span class="highlight">Model Name:</span> {{ model_name }}</p>
+            <p><span class="highlight">Serial Number:</span> {{ serial_number }}</p>
+            <p><span class="highlight">Number of Pedals:</span> {{ number_of_pedals }}</p>
+            <p><span class="highlight">Color:</span> {{ color }}</p>
+            <p><span class="highlight">Condition:</span> {{ condition }}</p>
+            <p><span class="highlight">Features:</span> {{ features }}</p>
+        </div>
+
+        <!-- Address Information Section -->
+        <div class="section-header">
+            Address Info
+        </div>
+        <div class="section-content address-info">
+            <p><span class="highlight">Zip Code:</span> {{ zip_code }}</p>
+            <p><span class="highlight">Street:</span> {{ street }}</p>
+            <p><span class="highlight">Full Address:</span> {{ address }}</p>
+            <p><span class="highlight">Elevator:</span> {{ elevator | string }}</p>
+            <p><span class="highlight">Building Type:</span> {{ building_type }}</p>
+            <p><span class="highlight">Floor:</span> {{ floor }}</p>
+        </div>
+
+        <!-- Personal Information Section -->
+        <div class="section-header">
+            Personal Info
+        </div>
+        <div class="section-content">
+            <p><span class="highlight">First Name:</span> {{ first_name }}</p>
+            <p><span class="highlight">Last Name:</span> {{ last_name }}</p>
+            <p><span class="highlight">Email:</span> {{ email }}</p>
+            <p><span class="highlight">Phone:</span> {{ phone }}</p>
+            <p><span class="highlight">Preferred Contact Method:</span> {{ contact_method }}</p>
+        </div>
+
+        <!-- Other Information Section -->
+        <div class="section-header">
+            Additional Info
+        </div>
+        <div class="section-content other-info">
+            <p><span class="highlight">Additional Info:</span> {{ other }}</p>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="email-footer">
+            <p>Thank you for using our service!</p>
+            <p>For any inquiries, please contact us at <strong>{{ email }}</strong>.</p>
+        </div>
+    </div>
+</body>
+</html>
